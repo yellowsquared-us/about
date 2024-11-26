@@ -1,101 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yellowsquared</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700i&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <title>Yellowsquared Background</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400i;700i&family=Open+Sans:wght@300;400&display=swap"
+        rel="stylesheet">
     <style>
-      body, html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        font-family: 'Open Sans', sans-serif;
-        background-color: #FFF700;
-        color: #1a1a1a;
-        line-height: 1.6;
-      }
-      .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        text-align: center;
-        padding: 20px;
-        box-sizing: border-box;
-      }
-      .header {
-        position: absolute;
-        top: 20px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-      }
-      .logo {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 1.2rem;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        color: rgba(26, 26, 26, 0.7);
-      }
-      .slogan {
-        margin-bottom: 30px;
-      }
-      .slogan-top {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        font-size: 2rem;
-        margin-bottom: 10px;
-      }
-      .slogan-bottom {
-        font-family: 'Playfair Display', serif;
-        font-weight: 700;
-        font-style: italic;
-        font-size: 3.2rem;
-        letter-spacing: 2px;
-      }
-      .description {
-        max-width: 600px;
-        font-size: 0.9rem;
-        font-weight: 300;
-        margin-bottom: 30px;
-      }
-      .cta-button {
-        display: inline-block;
-        padding: 12px 24px;
-        background-color: #1a1a1a;
-        color: #FFF700;
-        text-decoration: none;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        border-radius: 4px;
-        transition: background-color 0.3s ease;
-      }
-      .cta-button:hover {
-        background-color: #333;
-      }
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, #FFC700 0%, #F6CE25 100%);
+            color: #1a1a1a;
+            line-height: 1.6;
+            overflow: hidden;
+        }
+
+        .background-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .square {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.1);
+            animation: move-squares 20s infinite linear;
+            transform-origin: center;
+        }
+
+        @keyframes move-squares {
+            0% {
+                transform: rotate(0deg) scale(1);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: rotate(180deg) scale(1.2);
+                opacity: 0.4;
+            }
+
+            100% {
+                transform: rotate(360deg) scale(1);
+                opacity: 0.3;
+            }
+        }
+
+        .background-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 4px;
+            margin-bottom: 5px;
+            letter-spacing: 3px;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .logo b {
+            color: #F6CE25;
+            font-weight: 700;
+        }
+
+        .tech-icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            z-index: 10;
+        }
+
+        .slogan {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .slogan-top {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 2rem;
+            margin-bottom: 5px;
+            color: rgba(26, 26, 26, 0.9);
+        }
+
+        .slogan-bottom {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-style: italic;
+            font-size: 3rem;
+            letter-spacing: 2px;
+            color: rgba(26, 26, 26, 0.9);
+        }
+
+        .description {
+            max-width: 500px;
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 25px;
+            color: rgba(26, 26, 26, 0.9);
+            text-align: center;
+        }
+
+        .description .highlight {
+            background: linear-gradient(to right, #000, #333);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .description .highlight:hover {
+            transform: scale(1.05);
+            opacity: 0.8;
+        }
+
+        .app-icon {
+            position: absolute;
+            opacity: 0.2;
+            z-index: 1;
+        }
+
+        @media (max-width: 600px) {
+            .slogan-top {
+                font-size: 1.5rem;
+            }
+
+            .slogan-bottom {
+                font-size: 2.5rem;
+            }
+
+            .description {
+                font-size: 1rem;
+            }
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
+    <div class="background-container" id="background"></div>
+    <div class="background-pattern"></div>
     <div class="header">
-      <div class="logo">Yellowsquared</div>
+        <div class="header-left">
+            <img src="logo.svg" alt="Logo" class="tech-icon">
+            <div class="logo"><b>Yellow</b>squared</div>
+        </div>
     </div>
     <div class="container">
-      <div class="slogan">
-        <div class="slogan-top">Bright Ideas</div>
-        <div class="slogan-bottom">Squared.</div>
-      </div>
-      <div class="description">
-        <p>We transform complex challenges into intuitive mobile solutions. Our team crafts apps that don't just solve problems—they reimagine how technology can enhance your daily experience.</p>
-        <p>Innovation meets simplicity. Every pixel, every interaction is designed with purpose.</p>
-      </div>
-      <a href="#" class="cta-button">Explore Our Work</a>
+        <div class="slogan">
+            <div class="slogan-top">Bright Ideas</div>
+            <div class="slogan-bottom">Squared.</div>
+        </div>
+        <div class="description">
+            <p>Turning <span class="highlight">complex problems</span> into <span class="highlight">simple,
+                    intuitive</span> mobile apps that make <span class="highlight">life easier</span>.</p>
+        </div>
     </div>
-  </body>
+    <script>
+        function createSquares() {
+            const container = document.getElementById('background');
+            const squareCount = 2;
+
+            for (let i = 0; i < squareCount; i++) {
+                const square = document.createElement('div');
+                square.classList.add('square');
+                const size = Math.random() * 80 + 350;
+                square.style.width = `${size}px`;
+                square.style.height = `${size}px`;
+                square.style.top = `${Math.random() * 75 * i}%`;
+                square.style.left = `${Math.random() * 75 * i}%`;
+                square.style.transform = `rotate(${Math.random() * 360}deg)`;
+                square.style.backgroundColor = '#FFD700';
+                square.style.animationDelay = `-${Math.random() * 30}s`;
+
+                container.appendChild(square);
+            }
+        }
+
+        createSquares();
+    </script>
+</body>
+
 </html>
