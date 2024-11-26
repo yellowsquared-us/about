@@ -1,6 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Hello! World</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yellowsquared</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700i&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Open Sans', sans-serif;
+        background-color: #FFF700;
+        color: #1a1a1a;
+        line-height: 1.6;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .header {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+      }
+      .logo {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: rgba(26, 26, 26, 0.7);
+      }
+      .slogan {
+        margin-bottom: 30px;
+      }
+      .slogan-top {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+      .slogan-bottom {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        font-style: italic;
+        font-size: 3.2rem;
+        letter-spacing: 2px;
+      }
+      .description {
+        max-width: 600px;
+        font-size: 0.9rem;
+        font-weight: 300;
+        margin-bottom: 30px;
+      }
+      .cta-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #1a1a1a;
+        color: #FFF700;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+      }
+      .cta-button:hover {
+        background-color: #333;
+      }
+    </style>
   </head>
+  <body>
+    <div class="header">
+      <div class="logo">Yellowsquared</div>
+    </div>
+    <div class="container">
+      <div class="slogan">
+        <div class="slogan-top">Bright Ideas</div>
+        <div class="slogan-bottom">Squared.</div>
+      </div>
+      <div class="description">
+        <p>We transform complex challenges into intuitive mobile solutions. Our team crafts apps that don't just solve problems—they reimagine how technology can enhance your daily experience.</p>
+        <p>Innovation meets simplicity. Every pixel, every interaction is designed with purpose.</p>
+      </div>
+      <a href="#" class="cta-button">Explore Our Work</a>
+    </div>
+  </body>
 </html>
