@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification - YellowSquared</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400i;700i&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FFC700;
+            --secondary-color: #F6CE25;
+            --text-color: #1a1a1a;
+            --text-color-light: rgba(26, 26, 26, 0.9);
+            --background-overlay: rgba(255, 255, 255, 0.2);
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            z-index: 10;
+        }
+
+        .background-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.3;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .verification-card {
+            background: var(--background-overlay);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .message {
+            font-size: 1.1rem;
+            color: var(--text-color-light);
+            margin-bottom: 25px;
+        }
+
+        .home-link {
+            display: inline-block;
+            background: #000;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .home-link:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        .error {
+            color: #D32F2F;
+            background: rgba(211, 47, 47, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-pattern"></div>
+    
+    <div class="container">
+        <div class="verification-card">
+            <div id="successContent" style="display: none;">
+                <div class="icon">✅</div>
+                <h1 class="title">Email Verified!</h1>
+                <p class="message">Your email has been successfully verified. You can now access all features of your account.</p>
+            </div>
+            
+            <div id="errorContent" style="display: none;">
+                <div class="icon">❌</div>
+                <h1 class="title">Verification Failed</h1>
+                <p class="message">We couldn't verify your email address.</p>
+                <div id="errorMessage" class="error"></div>
+            </div>
+            
+            <a href="/" class="home-link">Return to Home</a>
+        </div>
+    </div>
+
+    <script>
+        // Parse URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const success = urlParams.get('success') === 'true';
+        const error = urlParams.get('error');
+
+        // Show appropriate content
+        if (success) {
+            document.getElementById('successContent').style.display = 'block';
+        } else {
+            document.getElementById('errorContent').style.display = 'block';
+            if (error) {
+                document.getElementById('errorMessage').textContent = decodeURIComponent(error);
+            }
+        }
+    </script>
+</body>
+</html>
