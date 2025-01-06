@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     fontFamily: {
@@ -18,19 +19,19 @@
         }
     </script>
 </head>
-<body class="bg-white">
+<body class="bg-gray-950 text-gray-100">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
+    <nav class="fixed top-0 w-full bg-gray-900/90 backdrop-blur-md z-50 border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <a href="index.html" class="flex-shrink-0 flex items-center">
                     <img class="h-8 w-auto" src="logo.svg" alt="Yellowsquared">
-                    <span class="ml-2 text-xl font-bold">Yellow<span class="text-yellow-500">squared</span></span>
+                    <span class="ml-2 text-xl font-bold text-white">Yellow<span class="text-yellow-500">squared</span></span>
                 </a>
                 <div class="flex items-center space-x-4">
-                    <a href="index.html#gallery" class="text-gray-600 hover:text-gray-900">Gallery</a>
-                    <a href="privacy_policy.html" class="text-gray-600 hover:text-gray-900">Privacy</a>
-                    <a href="mailto:hi@yellowsquared.us" class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
+                    <a href="index.html#gallery" class="text-gray-300 hover:text-white">Gallery</a>
+                    <a href="privacy_policy.html" class="text-gray-300 hover:text-white">Privacy</a>
+                    <a href="mailto:hi@yellowsquared.us" class="bg-yellow-500 text-black px-4 py-2 rounded-lg hover:bg-yellow-400 transition-colors font-medium">
                         Contact Us
                     </a>
                 </div>
@@ -40,26 +41,26 @@
 
     <!-- Privacy Policy Content -->
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
-        <h1 class="text-4xl font-bold text-gray-900 mb-8">Privacy Policy</h1>
+        <h1 class="text-4xl font-bold text-white mb-8">Privacy Policy</h1>
         
-        <div class="prose prose-lg">
-            <p class="text-gray-600 mb-6">
+        <div class="prose prose-lg prose-invert">
+            <p class="text-gray-300 mb-6">
                 Last updated: January 5, 2025
             </p>
 
             <section class="mb-12">
-                <h2 class="text-2xl font-semibold text-gray-900 mb-4">Introduction</h2>
-                <p class="text-gray-600 mb-4">
+                <h2 class="text-2xl font-semibold text-white mb-4">Introduction</h2>
+                <p class="text-gray-300 mb-4">
                     At Yellowsquared, we take your privacy seriously. This Privacy Policy explains how we collect, use, and protect your personal information when you use our mobile applications and website.
                 </p>
             </section>
 
             <section class="mb-12">
-                <h2 class="text-2xl font-semibold text-gray-900 mb-4">Information We Collect</h2>
-                <p class="text-gray-600 mb-4">
+                <h2 class="text-2xl font-semibold text-white mb-4">Information We Collect</h2>
+                <p class="text-gray-300 mb-4">
                     We collect minimal information necessary to provide our services:
                 </p>
-                <ul class="list-disc pl-6 text-gray-600 mb-4">
+                <ul class="list-disc pl-6 text-gray-300 mb-4">
                     <li>Device information</li>
                     <li>App usage statistics</li>
                     <li>Crash reports</li>
@@ -67,11 +68,11 @@
             </section>
 
             <section class="mb-12">
-                <h2 class="text-2xl font-semibold text-gray-900 mb-4">How We Use Your Information</h2>
-                <p class="text-gray-600 mb-4">
+                <h2 class="text-2xl font-semibold text-white mb-4">How We Use Your Information</h2>
+                <p class="text-gray-300 mb-4">
                     We use the collected information to:
                 </p>
-                <ul class="list-disc pl-6 text-gray-600 mb-4">
+                <ul class="list-disc pl-6 text-gray-300 mb-4">
                     <li>Improve our applications</li>
                     <li>Fix bugs and issues</li>
                     <li>Provide customer support</li>
@@ -79,23 +80,23 @@
             </section>
 
             <section class="mb-12">
-                <h2 class="text-2xl font-semibold text-gray-900 mb-4">Contact Us</h2>
-                <p class="text-gray-600 mb-4">
+                <h2 class="text-2xl font-semibold text-white mb-4">Contact Us</h2>
+                <p class="text-gray-300 mb-4">
                     If you have any questions about this Privacy Policy, please contact us at:
-                    <a href="mailto:hi@yellowsquared.us" class="text-yellow-600 hover:text-yellow-700">hi@yellowsquared.us</a>
+                    <a href="mailto:hi@yellowsquared.us" class="text-yellow-500 hover:text-yellow-400">hi@yellowsquared.us</a>
                 </p>
             </section>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-50">
+    <footer class="bg-gray-900 border-t border-gray-800">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             <div class="flex justify-center space-x-8">
-                <a href="mailto:hi@yellowsquared.us" class="text-gray-600 hover:text-gray-900">
+                <a href="mailto:hi@yellowsquared.us" class="text-gray-300 hover:text-white">
                     hi@yellowsquared.us
                 </a>
-                <a href="privacy_policy.html" class="text-gray-600 hover:text-gray-900">
+                <a href="privacy_policy.html" class="text-gray-300 hover:text-white">
                     Privacy Policy
                 </a>
             </div>
