@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,386 +10,99 @@
     <meta property="og:url" content="https://yellowsquared.us">
     <meta property="og:type" content="website">
     <title>Yellowsquared - Bright Ideas, Squared</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400i;700i&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <style>
-        /* Base styles */
-        :root {
-            --primary-color: #FFC700;
-            --secondary-color: #F6CE25;
-            --text-color: #1a1a1a;
-            --text-color-light: rgba(26, 26, 26, 0.9);
-            --background-overlay: rgba(255, 255, 255, 0.2);
-        }
-
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: 'Open Sans', sans-serif;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: var(--text-color);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Layout */
-        .container {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
-            padding: 80px 0 0;
-            box-sizing: border-box;
-            z-index: 10;
-        }
-
-        /* Background effects */
-        .background-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .background-pattern {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image:
-                linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-            background-size: 20px 20px;
-            opacity: 0.3;
-            z-index: 2;
-            pointer-events: none;
-        }
-
-        .square {
-            position: absolute;
-            background-color: rgba(255, 199, 0, 0.15);
-            animation: move-squares 30s infinite linear;
-            transform-origin: center;
-            border-radius: 10px;
-        }
-
-        /* Header */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 15px 20px;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-        }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo {
-            font-family: 'Montserrat', sans-serif;
-            letter-spacing: 3px;
-            font-size: 2rem;
-            color: white;
-        }
-
-        .logo b {
-            color: var(--secondary-color);
-            font-weight: 700;
-        }
-
-        .tech-icon {
-            width: 80px;
-            height: 80px;
-            object-fit: contain;
-        }
-
-        /* Content */
-        .slogan {
-            margin: 75px 0 20px;
-            width: 100%;
-        }
-
-        .slogan-top {
-            font-family: 'Playfair Display', sans-serif;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: 2rem;
-            margin-bottom: 5px;
-            color: var(--text-color-light);
-        }
-
-        .slogan-bottom {
-            font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            font-style: italic;
-            font-size: 3rem;
-            letter-spacing: 2px;
-            color: var(--text-color-light);
-        }
-
-        .description {
-            max-width: 500px;
-            font-size: 1.2rem;
-            font-weight: 300;
-            margin-bottom: 25px;
-            color: var(--text-color-light);
-        }
-
-        .highlight {
-            background: linear-gradient(to right, #000, #333);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .highlight:hover {
-            transform: scale(1.05);
-            opacity: 0.8;
-        }
-
-        /* App showcase */
-        .app-showcase {
-            width: 100%;
-            max-width: 1200px;
-            padding: 5px 20px;
-            box-sizing: border-box;
-        }
-
-        .app-card {
-            background: var(--background-overlay);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            display: flex;
-            gap: 40px;
-            align-items: center;
-            transition: transform 0.3s ease;
-        }
-
-        .app-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .app-image {
-            flex: 0 0 300px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .app-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .app-content {
-            flex: 1;
-            text-align: left;
-        }
-
-        .app-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: var(--text-color);
-        }
-
-        .app-description {
-            font-size: 1.1rem;
-            color: #333;
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
-
-        .app-link {
-            display: inline-block;
-            background: #000;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .app-link:hover {
-            background: #333;
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
-        .footer {
-            width: 100%;
-            background: var(--background-overlay);
-            backdrop-filter: blur(10px);
-            margin-top: 50px;
-        }
-
-        .footer-container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .footer-link {
-            color: rgba(26, 26, 26, 0.7);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-        }
-
-        .footer-link:hover {
-            color: rgba(26, 26, 26, 0.9);
-            text-decoration: underline;
-        }
-
-        /* Animations */
-        @keyframes move-squares {
-            0% {
-                transform: rotate(0deg) scale(1);
-                opacity: 0.2;
-            }
-            50% {
-                transform: rotate(180deg) scale(1.1);
-                opacity: 0.3;
-            }
-            100% {
-                transform: rotate(360deg) scale(1);
-                opacity: 0.2;
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
             }
         }
-
-        /* Media queries */
-        @media (max-width: 900px) {
-            .app-card {
-                flex-direction: column;
-                padding: 25px;
-            }
-
-            .app-image {
-                flex: 0 0 auto;
-                width: 100%;
-                max-width: 300px;
-                margin: 0 auto;
-            }
-
-            .app-content {
-                text-align: center;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .slogan-top {
-                font-size: 1.5rem;
-            }
-
-            .slogan-bottom {
-                font-size: 2.5rem;
-            }
-
-            .description {
-                font-size: 1rem;
-            }
-
-            .app-title {
-                font-size: 1.5rem;
-            }
-
-            .app-description {
-                font-size: 1rem;
-            }
-        }
-    </style>
+    </script>
 </head>
-<body>
-    <div class="background-container" id="background"></div>
-    <div class="background-pattern"></div>
-    
-    <header class="header">
-        <div class="header-left">
-            <img src="logo.svg" alt="Logo" class="tech-icon">
-            <div class="logo"><b>Yellow</b>squared</div>
-        </div>
-    </header>
-
-    <div class="container">
-        <div class="slogan">
-            <div class="slogan-top">Bright Ideas</div>
-            <div class="slogan-bottom">Squared.</div>
-        </div>
-
-        <div class="description">
-            <p>Turning <span class="highlight">complex problems</span> into <span class="highlight">simple, intuitive</span> mobile apps that make <span class="highlight">life easier</span>.</p>
-        </div>
-
-        <section class="app-showcase">
-            <div class="app-card">
-                <div class="app-image">
-                    <img src="https://play-lh.googleusercontent.com/eycIoOoPC-XgXd1KanvZPaUCEVJccqkDWZkoI9cuTBMebMbhsWLVPylatgVU04IP8A=w5120-h2880-rw" alt="Instapad App Screenshot">
+<body class="bg-gray-950 text-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900/90 backdrop-blur-md z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="/" class="flex items-center space-x-2">
+                        <img class="h-8 w-auto" src="logo.svg" alt="Yellowsquared">
+                        <span class="text-xl font-bold text-white">
+                            Yellow<span class="text-yellow-500">squared</span>
+                        </span>
+                    </a>
                 </div>
-                <div class="app-content">
-                    <h2 class="app-title">InstaPad</h2>
-                    <p class="app-description">Preserve pristine image quality with professional padding that commands 35% more screen space. InstaPad ensures your vision reaches your audience exactly as intended, preventing social platforms from compressing and auto-cropping your carefully composed photos. Batch process, customize, and share with confidence—down to the last pixel.</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.yellowsquared.instapad" class="app-link" target="_blank">Get it on Google Play</a>
+                <div class="flex items-center space-x-4">
+                    <a href="mailto:hi@yellowsquared.us" class="bg-yellow-500 text-black px-4 py-2 rounded-lg hover:bg-yellow-400 transition-colors font-medium">
+                        Contact Us
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <footer class="footer">
-            <div class="footer-container">
-                <a href="mailto:hi@yellowsquared.us" class="footer-link">hi@yellowsquared.us</a>
-                <div class="footer-section">
-                    <a href="privacy_policy.html" class="footer-link">Privacy Policy</a>
-                </div>
-            </div>
-        </footer>
+    <!-- Hero Section -->
+    <div class="pt-24 pb-16 sm:pt-32 sm:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-6xl font-bold text-white tracking-tight">
+                Bright Ideas, <span class="text-yellow-500">Squared</span>
+            </h1>
+            <p class="mt-6 text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
+                Turning complex problems into simple, intuitive mobile apps that make life easier.
+            </p>
+        </div>
     </div>
 
-    <script>
-        function createSquares() {
-            const container = document.getElementById('background');
-            const squareCount = 3;
+    <!-- App Gallery -->
+    <div id="gallery" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="bg-gray-900 rounded-2xl shadow-xl overflow-hidden border border-gray-800">
+            <div class="p-8 sm:p-10 lg:flex lg:items-center lg:gap-x-12">
+                <div class="lg:w-1/2">
+                    <img 
+                        src="https://play-lh.googleusercontent.com/eycIoOoPC-XgXd1KanvZPaUCEVJccqkDWZkoI9cuTBMebMbhsWLVPylatgVU04IP8A=w5120-h2880-rw"
+                        alt="InstaPad App Screenshot"
+                        class="rounded-lg shadow-lg w-full"
+                        loading="lazy"
+                    >
+                </div>
+                <div class="mt-8 lg:mt-0 lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-white">InstaPad</h2>
+                    <p class="mt-4 text-gray-300 text-lg">
+                        Preserve pristine image quality with professional padding that commands 35% more screen space. InstaPad ensures your vision reaches your audience exactly as intended.
+                    </p>
+                    <div class="mt-8">
+                        <a 
+                            href="https://play.google.com/store/apps/details?id=com.yellowsquared.instapad"
+                            class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-black bg-yellow-500 hover:bg-yellow-400 transition-colors"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Get it on Google Play
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            for (let i = 0; i < squareCount; i++) {
-                const square = document.createElement('div');
-                square.classList.add('square');
-                const size = Math.random() * 100 + 300;
-                square.style.width = `${size}px`;
-                square.style.height = `${size}px`;
-                square.style.top = `${Math.random() * 70}%`;
-                square.style.left = `${Math.random() * 70}%`;
-                square.style.transform = `rotate(${Math.random() * 360}deg)`;
-                square.style.animationDelay = `-${Math.random() * 20}s`;
-                container.appendChild(square);
-            }
-        }
-
-        createSquares();
-    </script>
+    <!-- Footer -->
+    <footer class="bg-gray-900 mt-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-center space-x-8">
+                <a href="mailto:hi@yellowsquared.us" class="text-gray-300 hover:text-white">
+                    hi@yellowsquared.us
+                </a>
+                <a href="privacy_policy.html" class="text-gray-300 hover:text-white">
+                    Privacy Policy
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,150 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email Verification - YellowSquared</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400i;700i&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #FFC700;
-            --secondary-color: #F6CE25;
-            --text-color: #1a1a1a;
-            --text-color-light: rgba(26, 26, 26, 0.9);
-            --background-overlay: rgba(255, 255, 255, 0.2);
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
         }
-
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: 'Open Sans', sans-serif;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: var(--text-color);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .container {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            text-align: center;
-            padding: 20px;
-            box-sizing: border-box;
-            z-index: 10;
-        }
-
-        .background-pattern {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image:
-                linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-            background-size: 20px 20px;
-            opacity: 0.3;
-            z-index: 2;
-            pointer-events: none;
-        }
-
-        .verification-card {
-            background: var(--background-overlay);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
-            max-width: 500px;
-            width: 90%;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: var(--text-color);
-        }
-
-        .message {
-            font-size: 1.1rem;
-            color: var(--text-color-light);
-            margin-bottom: 25px;
-        }
-
-        .home-link {
-            display: inline-block;
-            background: #000;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .home-link:hover {
-            background: #333;
-            transform: translateY(-2px);
-        }
-
-        .error {
-            color: #D32F2F;
-            background: rgba(211, 47, 47, 0.1);
-            padding: 10px;
-            border-radius: 8px;
-            margin-top: 15px;
-            font-size: 0.9rem;
-        }
-    </style>
+    </script>
 </head>
-<body>
-    <div class="background-pattern"></div>
-    
-    <div class="container">
-        <div class="verification-card">
-            <div id="successContent" style="display: none;">
-                <div class="icon">✅</div>
-                <h1 class="title">Email Verified!</h1>
-                <p class="message">Your email has been successfully verified. You can now access all features of your account.</p>
+<body class="bg-gray-950 text-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900/90 backdrop-blur-md z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center">
+                    <img class="h-8 w-auto" src="logo.svg" alt="Yellowsquared">
+                    <span class="ml-2 text-xl font-bold text-white">Yellow<span class="text-yellow-500">squared</span></span>
+                </a>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html#gallery" class="text-gray-300 hover:text-white">Gallery</a>
+                    <a href="privacy_policy.html" class="text-gray-300 hover:text-white">Privacy</a>
+                    <a href="mailto:hi@yellowsquared.us" class="bg-yellow-500 text-black px-4 py-2 rounded-lg hover:bg-yellow-400 transition-colors font-medium">
+                        Contact Us
+                    </a>
+                </div>
             </div>
-            
-            <div id="errorContent" style="display: none;">
-                <div class="icon">❌</div>
-                <h1 class="title">Verification Failed</h1>
-                <p class="message">We couldn't verify your email address.</p>
-                <div id="errorMessage" class="error"></div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="min-h-screen flex items-center justify-center px-4 py-20">
+        <div class="bg-gray-900 rounded-2xl shadow-xl overflow-hidden border border-gray-800 max-w-md w-full p-8">
+            <!-- Loading State -->
+            <div id="loadingContent" class="text-center space-y-4 opacity-0 transform translate-y-4 transition-all duration-300">
+                <div class="flex justify-center">
+                    <div class="w-12 h-12 border-4 border-yellow-500 border-t-transparent rounded-full animate-spin"></div>
+                </div>
+                <p class="text-gray-300 text-lg">Verifying your email...</p>
             </div>
-            
-            <a href="/" class="home-link">Return to Home</a>
+
+            <!-- Success State -->
+            <div id="successContent" class="text-center space-y-6 hidden opacity-0 transform translate-y-4 transition-all duration-300">
+                <div class="flex justify-center">
+                    <svg class="w-16 h-16 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <h1 class="text-2xl font-bold text-white">Email Verified!</h1>
+                <p class="text-gray-300">Your email has been successfully verified. You can now access all features of your account.</p>
+                <p class="text-gray-300">Redirecting you in <span id="countdown" class="font-semibold text-yellow-500">5</span> seconds...</p>
+                <div class="space-y-3">
+                    <a href="/dashboard" class="block w-full bg-yellow-500 text-black font-medium px-4 py-2 rounded-lg hover:bg-yellow-400 transition-colors">
+                        Go to Dashboard
+                    </a>
+                    <a href="/" class="block w-full bg-gray-800 text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                        Return to Home
+                    </a>
+                </div>
+            </div>
+
+            <!-- Error State -->
+            <div id="errorContent" class="text-center space-y-6 hidden opacity-0 transform translate-y-4 transition-all duration-300">
+                <div class="flex justify-center">
+                    <svg class="w-16 h-16 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <h1 class="text-2xl font-bold text-white">Verification Failed</h1>
+                <p class="text-gray-300">We couldn't verify your email address.</p>
+                <div id="errorMessage" class="bg-red-900/50 border border-red-500/50 text-red-300 rounded-lg p-4 text-sm">
+                    <span class="error-text"></span>
+                </div>
+                <div class="space-y-3">
+                    <button onclick="resendVerification()" class="block w-full bg-yellow-500 text-black font-medium px-4 py-2 rounded-lg hover:bg-yellow-400 transition-colors">
+                        Resend Verification Email
+                    </button>
+                    <a href="/" class="block w-full bg-gray-800 text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                        Return to Home
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
+        function showContent(elementId) {
+            ['loadingContent', 'successContent', 'errorContent'].forEach(id => {
+                const element = document.getElementById(id);
+                if (id === elementId) {
+                    element.style.display = 'block';
+                    // Trigger reflow
+                    element.offsetHeight;
+                    element.classList.remove('opacity-0', 'translate-y-4');
+                } else {
+                    element.style.display = 'none';
+                    element.classList.add('opacity-0', 'translate-y-4');
+                }
+            });
+        }
+
+        function startCountdown() {
+            let count = 5;
+            const countdownElement = document.getElementById('countdown');
+            const interval = setInterval(() => {
+                count--;
+                countdownElement.textContent = count;
+                if (count <= 0) {
+                    clearInterval(interval);
+                    window.location.href = '/dashboard';
+                }
+            }, 1000);
+        }
+
+        async function resendVerification() {
+            try {
+                const response = await fetch('/api/resend-verification', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    const errorElement = document.getElementById('errorMessage');
+                    errorElement.innerHTML = `
+                        <span class="text-yellow-500">Verification email has been resent. Please check your inbox.</span>
+                    `;
+                }
+            } catch (error) {
+                console.error('Failed to resend verification email:', error);
+            }
+        }
+
+        // Initial load
+        showContent('loadingContent');
+
         // Parse URL parameters
         const urlParams = new URLSearchParams(window.location.search);
         const success = urlParams.get('success') === 'true';
         const error = urlParams.get('error');
 
-        // Show appropriate content
-        if (success) {
-            document.getElementById('successContent').style.display = 'block';
-        } else {
-            document.getElementById('errorContent').style.display = 'block';
-            if (error) {
-                document.getElementById('errorMessage').textContent = decodeURIComponent(error);
+        // Simulate network delay for smoother transition
+        setTimeout(() => {
+            if (success) {
+                showContent('successContent');
+                startCountdown();
+            } else {
+                showContent('errorContent');
+                if (error) {
+                    document.querySelector('#errorMessage .error-text').textContent = 
+                        decodeURIComponent(error);
+                }
             }
-        }
+        }, 1000);
     </script>
 </body>
 </html>
