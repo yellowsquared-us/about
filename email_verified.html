@@ -95,9 +95,10 @@
         </div>
     </footer>
     <script src="/js/components.js"></script>
-    <script src="/js/utils.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
+     <script type="module">
+      import { showContent, startCountdown } from '/js/utils.js';
+
+       document.addEventListener('DOMContentLoaded', () => {
 
             initializeEmailVerification();
 
