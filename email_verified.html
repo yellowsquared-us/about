@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="dark h-full">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,55 +10,70 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="/js/tailwind-config.js"></script>
 </head>
+
 <body class="bg-gray-950 text-gray-100 flex flex-col min-h-screen">
     <nav class="fixed top-0 w-full bg-gray-900/90 backdrop-blur-md z-50 border-b border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16 items-center">
-            <a href="/" class="flex-shrink-0 flex items-center">
-                <img class="h-8 w-auto" src="logo.svg" alt="Yellowsquared">
-                <span class="ml-2 text-xl font-bold text-white">
-                    Yellow<span class="text-yellow-500">squared</span>
-                </span>
-            </a>
-            <div class="flex items-center space-x-4">
-                <a href="mailto:hi@yellowsquared.us"
-                   class="bg-yellow-500 text-black px-4 py-2 rounded-lg hover:bg-yellow-400 transition-colors font-medium">
-                    Contact Us
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="/" class="flex-shrink-0 flex items-center">
+                    <img class="h-8 w-auto" src="logo.svg" alt="Yellowsquared">
+                    <span class="ml-2 text-xl font-bold text-white">
+                        Yellow<span class="text-yellow-500">squared</span>
+                    </span>
                 </a>
+                <div class="flex items-center space-x-4">
+                    <a href="mailto:hi@yellowsquared.us"
+                        class="bg-yellow-500 text-black px-4 py-2 rounded-lg hover:bg-yellow-400 transition-colors font-medium">
+                        Contact Us
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
     <main class="flex-grow">
         <div id="status-container">
             <div class="min-h-screen flex items-center justify-center px-4 py-20">
-                <div class="bg-gray-900 rounded-2xl shadow-xl overflow-hidden border border-gray-800 max-w-md w-full p-8">
+                <div
+                    class="bg-gray-900 rounded-2xl shadow-xl overflow-hidden border border-gray-800 max-w-md w-full p-8">
                     <!-- Loading State -->
-                    <div id="loadingContent" class="text-center space-y-4 opacity-0 transform translate-y-4 transition-all duration-300">
-                        <div class="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-yellow-500 mx-auto"></div>
+                    <div id="loadingContent"
+                        class="text-center space-y-4 opacity-0 transform translate-y-4 transition-all duration-300">
+                        <div
+                            class="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-yellow-500 mx-auto">
+                        </div>
                         <p class="text-gray-300 text-lg">Loading...</p>
                     </div>
-            
+
                     <!-- Success State -->
-                    <div id="successContent" class="text-center space-y-6 hidden opacity-0 transform translate-y-4 transition-all duration-300">
-                        <svg class="mx-auto h-12 w-12 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    <div id="successContent"
+                        class="text-center space-y-6 opacity-0 transform translate-y-4 transition-all duration-300" style="display: none;">
+                        <svg class="mx-auto h-12 w-12 text-green-500" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd" />
                         </svg>
                         <h1 class="text-2xl font-bold text-white">Success!</h1>
                         <p class="text-gray-300">Your email has been verified.</p>
-                
-                         <p class="text-gray-300">Redirecting you in <span id="countdown" class="font-semibold text-yellow-500">5</span> seconds...</p>
-                     
+
+                        <p class="text-gray-300">Redirecting you in <span id="countdown"
+                                class="font-semibold text-yellow-500">5</span> seconds...</p>
+
                     </div>
-            
+
                     <!-- Error State -->
-                    <div id="errorContent" class="text-center space-y-6 hidden opacity-0 transform translate-y-4 transition-all duration-300">
-                        <svg class="mx-auto h-12 w-12 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                    <div id="errorContent"
+                        class="text-center space-y-6 opacity-0 transform translate-y-4 transition-all duration-300" style="display: none;">
+                        <svg class="mx-auto h-12 w-12 text-red-500" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                                clip-rule="evenodd" />
                         </svg>
                         <h1 class="text-2xl font-bold text-white">Error!</h1>
                         <p class="text-gray-300">An error occurred.</p>
-                        <div id="errorMessage" class="bg-red-900/50 border border-red-500/50 text-red-300 rounded-lg p-4 text-sm">
+                        <div id="errorMessage"
+                            class="bg-red-900/50 border border-red-500/50 text-red-300 rounded-lg p-4 text-sm">
                             <span class="error-text"></span>
                         </div>
                     </div>
@@ -67,45 +83,46 @@
 
     </main>
     <footer class="bg-gray-900 border-t border-gray-800 mt-auto">
-    <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-center space-x-8">
-            <a href="mailto:hi@yellowsquared.us" class="text-gray-300 hover:text-white">
-                hi@yellowsquared.us
-            </a>
-            <a href="/privacy" class="text-gray-300 hover:text-white">
-                Privacy Policy
-            </a>
+        <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-center space-x-8">
+                <a href="mailto:hi@yellowsquared.us" class="text-gray-300 hover:text-white">
+                    hi@yellowsquared.us
+                </a>
+                <a href="/privacy" class="text-gray-300 hover:text-white">
+                    Privacy Policy
+                </a>
+            </div>
         </div>
-    </div>
-</footer>
-<script src="/js/components.js"></script>
-<script src="/js/utils.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        
+    </footer>
+    <script src="/js/components.js"></script>
+    <script src="/js/utils.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
             initializeEmailVerification();
-        
-    });
 
-    function initializeEmailVerification() {
-        showContent('loadingContent');
-        const urlParams = new URLSearchParams(window.location.search);
-        const success = urlParams.get('success') === 'true';
-        const error = urlParams.get('error');
+        });
 
-        setTimeout(() => {
-            if (success) {
-                showContent('successContent');
-                startCountdown('countdown', '/', 5);
-            } else {
-                showContent('errorContent');
-                if (error) {
-                    document.querySelector('#errorMessage .error-text').textContent =
-                        decodeURIComponent(error);
+        function initializeEmailVerification() {
+            showContent('loadingContent', ['loadingContent', 'successContent', 'errorContent']);
+            const urlParams = new URLSearchParams(window.location.search);
+            const success = urlParams.get('success') === 'true';
+            const error = urlParams.get('error');
+
+            setTimeout(() => {
+                if (success) {
+                    showContent('successContent', ['loadingContent', 'successContent', 'errorContent']);
+                    startCountdown('countdown', '/', 5);
+                } else {
+                    showContent('errorContent', ['loadingContent', 'successContent', 'errorContent']);
+                    if (error) {
+                        document.querySelector('#errorMessage .error-text').textContent =
+                            decodeURIComponent(error);
+                    }
                 }
-            }
-        }, 1000);
-    }
-</script>
+            }, 1000);
+        }
+    </script>
 </body>
+
 </html>
