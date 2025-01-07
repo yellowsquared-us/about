@@ -4,44 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="YellowSquared simplifies complex problems into intuitive mobile apps for iOS and Android. Experience seamless solutions for better productivity.">
-    <meta property="og:title" content="YellowSquared - Simplifying Mobile App Development">
-    <meta property="og:description"
-        content="Transforming complex problems into simple, intuitive mobile apps for iOS and Android.">
-    <meta property="og:image" content="https://example.com/og-image.png">
-    <meta property="og:url" content="https://yellowsquared.us">
-    <meta property="og:type" content="website">
     <title>Yellowsquared - Bright Ideas, Squared</title>
+    <!-- Shared Head Content -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
+    <script src="/js/tailwind-config.js"></script>
 </head>
 
 <body class="bg-gray-950 text-gray-100 flex flex-col min-h-screen">
-    <!-- Navigation -->
     <nav class="fixed top-0 w-full bg-gray-900/90 backdrop-blur-md z-50 border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="/" class="flex items-center space-x-2">
-                        <img class="h-8 w-auto" src="logo.svg" alt="Yellowsquared">
-                        <span class="text-xl font-bold text-white">
-                            Yellow<span class="text-yellow-500">squared</span>
-                        </span>
-                    </a>
-                </div>
+                <a href="/" class="flex-shrink-0 flex items-center">
+                    <img class="h-8 w-auto" src="logo.svg" alt="Yellowsquared">
+                    <span class="ml-2 text-xl font-bold text-white">
+                        Yellow<span class="text-yellow-500">squared</span>
+                    </span>
+                </a>
                 <div class="flex items-center space-x-4">
                     <a href="mailto:hi@yellowsquared.us"
                         class="bg-yellow-500 text-black px-4 py-2 rounded-lg hover:bg-yellow-400 transition-colors font-medium">
@@ -51,10 +30,7 @@
             </div>
         </div>
     </nav>
-
-    <!-- Main Content Wrapper -->
-    <main class="flex-grow">
-        <!-- Hero Section -->
+    <main class="flex-grow mb-12">
         <div class="pt-24 pb-8 sm:pt-32 sm:pb-12">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h1 class="text-4xl sm:text-6xl font-bold text-white tracking-tight">
@@ -68,29 +44,38 @@
 
         <!-- App Gallery -->
         <div id="gallery" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
-            <div class="group relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-xl shadow-lg overflow-hidden border border-gray-800/50 backdrop-blur-xl transition-all duration-300 hover:shadow-yellow-500/10 hover:border-yellow-500/20">
-                <div class="absolute inset-0 bg-gradient-to-r from-yellow-500/10 via-transparent to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div
+                class="group relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-xl shadow-lg overflow-hidden border border-gray-800/50 backdrop-blur-xl transition-all duration-300 hover:shadow-yellow-500/10 hover:border-yellow-500/20">
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-yellow-500/10 via-transparent to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                </div>
                 <div class="p-3 lg:flex lg:items-center lg:gap-x-4 relative">
                     <div class="lg:w-1/3 transform transition-transform duration-500 group-hover:scale-[1.02]">
                         <div class="rounded-lg overflow-hidden shadow-lg bg-gray-800/50">
                             <img src="https://play-lh.googleusercontent.com/eycIoOoPC-XgXd1KanvZPaUCEVJccqkDWZkoI9cuTBMebMbhsWLVPylatgVU04IP8A=w5120-h2880-rw"
-                                alt="InstaPad App Screenshot" class="w-full transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                                alt="InstaPad App Screenshot"
+                                class="w-full transition-transform duration-700 group-hover:scale-105" loading="lazy">
                         </div>
                     </div>
                     <div class="mt-3 lg:mt-0 lg:w-2/3 transform transition-all duration-500 group-hover:translate-x-1">
-                        <h2 class="text-xl font-bold text-white bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">InstaPad</h2>
+                        <h2
+                            class="text-xl font-bold text-white bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                            InstaPad</h2>
                         <p class="mt-1.5 text-gray-300 text-sm leading-relaxed">
-                            Preserve pristine image quality with professional padding that commands 35% more screen space.
+                            Preserve pristine image quality with professional padding that commands 35% more screen
+                            space.
                             InstaPad ensures your vision reaches your audience exactly as intended.
                         </p>
                         <div class="mt-2 flex flex-wrap gap-2">
                             <a href="https://apps.apple.com/us/app/instapad-it/id6739543255" target="_blank"
-                                class="transform transition-transform duration-300 hover:scale-105" rel="noopener noreferrer">
+                                class="transform transition-transform duration-300 hover:scale-105"
+                                rel="noopener noreferrer">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/135px-Download_on_the_App_Store_Badge.svg.png"
                                     alt="App Store" class="h-10">
                             </a>
-                            <a href="https://play.google.com/store/apps/details?id=com.yellowsquared.instapad" target="_blank"
-                                class="transform transition-transform duration-300 hover:scale-105" rel="noopener noreferrer">
+                            <a href="https://play.google.com/store/apps/details?id=com.yellowsquared.instapad"
+                                target="_blank" class="transform transition-transform duration-300 hover:scale-105"
+                                rel="noopener noreferrer">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                                     alt="Google Play Store" class="h-10">
                             </a>
@@ -100,15 +85,13 @@
             </div>
         </div>
     </main>
-
-    <!-- Footer -->
     <footer class="bg-gray-900 border-t border-gray-800 mt-auto">
         <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
             <div class="flex justify-center space-x-8">
                 <a href="mailto:hi@yellowsquared.us" class="text-gray-300 hover:text-white">
                     hi@yellowsquared.us
                 </a>
-                <a href="privacy_policy.html" class="text-gray-300 hover:text-white">
+                <a href="/privacy" class="text-gray-300 hover:text-white">
                     Privacy Policy
                 </a>
             </div>
