@@ -1,106 +1,304 @@
 <!DOCTYPE html>
-<html lang="en" class="dark h-full">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="YellowSquared simplifies complex problems into intuitive mobile apps for iOS and Android. Experience seamless solutions for better productivity.">
+    <meta property="og:title" content="YellowSquared - Simplifying Mobile App Development">
+    <meta property="og:description"
+        content="Transforming complex problems into simple, intuitive mobile apps for iOS and Android.">
+    <meta property="og:image" content="https://example.com/og-image.png">
+    <meta property="og:url" content="https://yellowsquared.us">
+    <meta property="og:type" content="website">
     <title>Yellowsquared - Bright Ideas, Squared</title>
-    <!-- Shared Head Content -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="/js/tailwind-config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        gold: {
+                            50: '#fefdf8',
+                            100: '#fdf6e3',
+                            200: '#f9e6b8',
+                            300: '#f2d078',
+                            400: '#e6b547',
+                            500: '#d4971f',
+                            600: '#b87d15',
+                            700: '#9a6514',
+                            800: '#7c5216',
+                            900: '#674315',
+                            950: '#3d260c',
+                        },
+                        cream: {
+                            50: '#fefdfb',
+                            100: '#fdfbf7',
+                            200: '#f9f4e9',
+                            300: '#f5ead5',
+                            400: '#eedcb8',
+                            500: '#e4c794',
+                            600: '#d5a968',
+                            700: '#c08d49',
+                            800: '#a2733d',
+                            900: '#856035',
+                            950: '#473218',
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out',
+                        'fade-in': 'fadeIn 1s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body class="bg-gray-950 text-gray-100 flex flex-col min-h-screen">
-    <nav class="fixed top-0 w-full bg-gray-900/90 backdrop-blur-md z-50 border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <a href="/" class="flex-shrink-0 flex items-center">
-                    <img class="h-8 w-auto" src="logo.svg" alt="Yellowsquared">
-                    <span class="ml-2 text-xl font-bold text-white">
-                        Yellow<span class="text-yellow-500">squared</span>
-                    </span>
-                </a>
-                <div class="flex items-center space-x-4">
+<body class="bg-gray-950 text-cream-100 antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-950/90 backdrop-blur-xl z-50 border-b border-gold-900/20">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center animate-fade-in">
+                    <a href="/" class="flex items-center space-x-3 group">
+                        <img class="h-8 w-auto transition-transform group-hover:scale-105" src="logo.svg"
+                            alt="Yellowsquared">
+                        <span class="text-xl font-light text-cream-50 tracking-[0.02em]">
+                            Yellow<span class="text-gold-400 font-medium">squared</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6 animate-fade-in">
+                    <a href="#apps-section" 
+                        onclick="document.getElementById('apps-section').scrollIntoView({ behavior: 'smooth' }); return false;"
+                        class="text-cream-300 hover:text-gold-400 transition-all duration-300 font-light tracking-wide text-sm relative after:content-[''] after:absolute after:w-0 after:h-px after:bg-gold-400 after:left-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full">
+                        Explore Apps
+                    </a>
                     <a href="mailto:hi@yellowsquared.us"
-                        class="bg-yellow-500 text-black px-4 py-2 rounded-lg hover:bg-yellow-400 transition-colors font-medium">
+                        class="text-cream-300 hover:text-gold-400 transition-all duration-300 font-light tracking-wide text-sm relative after:content-[''] after:absolute after:w-0 after:h-px after:bg-gold-400 after:left-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full">
                         Contact Us
                     </a>
                 </div>
             </div>
         </div>
     </nav>
-    <main class="flex-grow mb-12">
-        <div class="pt-24 pb-8 sm:pt-32 sm:pb-12">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 class="text-4xl sm:text-6xl font-bold text-white tracking-tight">
-                    Bright Ideas, <span class="text-yellow-500">squared</span>
-                </h1>
-                <p class="mt-6 text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-                    Turning complex problems into simple, intuitive mobile apps that make life easier.
-                </p>
-            </div>
+
+    <!-- Hero Section -->
+    <section
+        class="min-h-screen flex items-center justify-center px-6 relative overflow-hidden bg-gradient-to-br from-gold-400 via-gold-500 to-gold-600">
+
+        <div class="relative z-10 text-center max-w-6xl mx-auto">
+            <h1
+                class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light text-gray-900 tracking-tight animate-fade-in-up mb-8 leading-tight px-4">
+                Turning <span class="font-bold">complex problems</span> into <span class="font-bold">simple,
+                    intuitive</span> mobile apps that make <span class="font-bold">life easier</span>.
+            </h1>
         </div>
 
-        <!-- App Gallery -->
-        <div id="gallery" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
-            <div
-                class="group relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-xl shadow-lg overflow-hidden border border-gray-800/50 backdrop-blur-xl transition-all duration-300 hover:shadow-yellow-500/10 hover:border-yellow-500/20">
+        <!-- Scroll indicator - positioned outside main content -->
+        <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-fade-in z-50 cursor-pointer"
+            style="animation-delay: 1s"
+            onclick="document.getElementById('apps-section').scrollIntoView({ behavior: 'smooth' })">
+            <div class="flex flex-col items-center space-y-3 hover:scale-105 transition-transform duration-300">
+                <span class="text-xs font-medium tracking-[0.2em] uppercase text-gray-800/80">Explore Our Apps</span>
                 <div
-                    class="absolute inset-0 bg-gradient-to-r from-yellow-500/10 via-transparent to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    class="w-5 h-8 border border-gray-800/40 rounded-full flex justify-center bg-gradient-to-b from-transparent to-gray-800/10">
+                    <div class="w-0.5 h-2 bg-gradient-to-b from-gray-800 to-gray-900 rounded-full mt-1.5 animate-float">
+                    </div>
                 </div>
-                <div class="p-3 lg:flex lg:items-center lg:gap-x-4 relative">
-                    <div class="lg:w-1/3 transform transition-transform duration-500 group-hover:scale-[1.02]">
-                        <div class="rounded-lg overflow-hidden shadow-lg bg-gray-800/50">
-                            <img src="https://play-lh.googleusercontent.com/eycIoOoPC-XgXd1KanvZPaUCEVJccqkDWZkoI9cuTBMebMbhsWLVPylatgVU04IP8A=w5120-h2880-rw"
-                                alt="InstaPad App Screenshot"
-                                class="w-full transition-transform duration-700 group-hover:scale-105" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Apps Section -->
+    <section id="apps-section" class="py-32 px-6 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-20 animate-fade-in-up">
+                <p class="text-4xl sm:text-5xl font-light text-cream-50 mb-8 tracking-wide">
+                    <span class="text-cream-400 text-2xl uppercase tracking-[0.3em] font-normal opacity-60">Our apps</span><br>
+                    <span class="text-gold-300 font-medium italic">simplify</span>.
+                </p>
+            </div>
+
+            <!-- Apps Gallery -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto" id="apps-gallery">
+                <!-- BatchPad -->
+                <div class="group relative">
+                    <div
+                        class="bg-gradient-to-br from-orange-950/20 to-amber-950/20 backdrop-blur-sm rounded-2xl p-8 border border-orange-700/30 hover:border-orange-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-orange-900/20 h-full relative overflow-hidden">
+                        <!-- Free Badge -->
+                        <div class="absolute top-4 left-4 z-20">
+                            <span class="inline-block bg-gold-500/80 backdrop-blur-sm text-gray-900 px-2 py-1 rounded text-xs font-medium uppercase tracking-wide">Free</span>
+                        </div>
+                        <!-- Productivity Pattern -->
+                        <div class="absolute top-4 right-4 text-orange-400/20 text-4xl transform rotate-12">⚡</div>
+                        <div class="text-center relative z-10 flex flex-col h-full">
+                            <div class="rounded-xl p-6 mb-6">
+                                <div
+                                    class="w-28 h-28 rounded-2xl mx-auto flex items-center justify-center shadow-lg shadow-orange-500/20 overflow-hidden border-2 border-orange-400/30">
+                                    <img src="https://play-lh.googleusercontent.com/KGqcoEYzoYhbm6QvA_6pFV0SiQ-YU014NQ9rr8NcNr_QtSkrOja2y5EUX9U5uEAa7Zc=w480-h960"
+                                        alt="BatchPad" class="w-full h-full object-cover rounded-xl">
+                                </div>
+                            </div>
+                            <h3 class="text-2xl font-medium text-cream-50 mb-2 tracking-wide">BatchPad</h3>
+                            <div class="text-xs text-orange-300 mb-4 font-medium uppercase tracking-widest">Photo Editor</div>
+                            <p class="text-sm text-cream-200 leading-relaxed mb-4 font-light flex-grow">
+                                Stop social platforms from <span class="text-orange-300 font-medium">ruining your photos</span>. 
+                                Add professional padding for 35% more screen space on Instagram and other platforms. 
+                                <strong class="text-cream-100">Full resolution, no quality loss</strong>.
+                            </p>
+                            <div class="space-y-3">
+                                <div class="flex flex-row gap-2 justify-center items-center">
+                                    <a href="https://apps.apple.com/us/app/batchpad/id6739543255" target="_blank"
+                                        rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
+                                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1559347200"
+                                            alt="Download on the App Store" style="height: 48px;">
+                                    </a>
+                                    <a href="https://play.google.com/store/apps/details?id=com.yellowsquared.batchpad"
+                                        target="_blank" rel="noopener noreferrer"
+                                        class="hover:opacity-80 transition-opacity">
+                                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                                            alt="Get it on Google Play" style="height: 70px;">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="mt-3 lg:mt-0 lg:w-2/3 transform transition-all duration-500 group-hover:translate-x-1">
-                        <h2
-                            class="text-xl font-bold text-white bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                            InstaPad</h2>
-                        <p class="mt-1.5 text-gray-300 text-sm leading-relaxed">
-                            Preserve pristine image quality with professional padding that commands 35% more screen
-                            space.
-                            InstaPad ensures your vision reaches your audience exactly as intended.
-                        </p>
-                        <div class="mt-2 flex flex-wrap gap-2">
-                            <a href="https://apps.apple.com/us/app/instapad-it/id6739543255" target="_blank"
-                                class="transform transition-transform duration-300 hover:scale-105"
-                                rel="noopener noreferrer">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/135px-Download_on_the_App_Store_Badge.svg.png"
-                                    alt="App Store" class="h-10">
-                            </a>
-                            <a href="https://play.google.com/store/apps/details?id=com.yellowsquared.instapad"
-                                target="_blank" class="transform transition-transform duration-300 hover:scale-105"
-                                rel="noopener noreferrer">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                                    alt="Google Play Store" class="h-10">
-                            </a>
+                </div>
+
+                <!-- Name Analytics -->
+                <div class="group relative">
+                    <div
+                        class="bg-gradient-to-br from-purple-950/20 to-indigo-950/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-700/30 hover:border-purple-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-purple-900/20 h-full relative overflow-hidden">
+                        <!-- Free Badge -->
+                        <div class="absolute top-4 left-4 z-20">
+                            <span class="inline-block bg-gold-500/80 backdrop-blur-sm text-gray-900 px-2 py-1 rounded text-xs font-medium uppercase tracking-wide">Free</span>
+                        </div>
+                        <!-- Analytics Pattern -->
+                        <div class="absolute top-4 right-4 text-purple-400/20 text-4xl transform -rotate-12">📊</div>
+                        <div class="text-center relative z-10 flex flex-col h-full">
+                            <div class="rounded-xl p-6 mb-6">
+                                <div
+                                    class="w-28 h-28 rounded-2xl mx-auto flex items-center justify-center shadow-lg shadow-purple-500/20 overflow-hidden border-2 border-purple-400/30">
+                                    <img src="https://play-lh.googleusercontent.com/xbN_pVcwyLzPeJUC_nVkMkPx0pPFhEllND8cz9e0zed-zL1z26Ybd1Vpizqa7tt_A9tg=w480-h960"
+                                        alt="Name Analytics" class="w-full h-full object-cover rounded-xl">
+                                </div>
+                            </div>
+                            <h3 class="text-2xl font-medium text-cream-50 mb-2 tracking-wide">Name Analytics</h3>
+                            <div class="text-xs text-purple-300 mb-4 font-medium uppercase tracking-widest">Data & Insights</div>
+                            <p class="text-sm text-cream-200 leading-relaxed mb-4 font-light flex-grow">
+                                Find the perfect name with <span class="text-purple-300 font-medium">data-driven insights</span>. 
+                                Explore trends, meanings, and sync on favorites. Swipe to discover, browse and filter smartly. 
+                                <strong class="text-cream-100">Backed with data</strong>.
+                            </p>
+                            <div class="space-y-3">
+                                <div class="flex flex-row gap-2 justify-center items-center">
+                                    <a href="https://apps.apple.com/us/app/name-analytics/id6741346173" target="_blank"
+                                        rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
+                                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1559347200"
+                                            alt="Download on the App Store" style="height: 48px;">
+                                    </a>
+                                    <a href="https://play.google.com/store/apps/details?id=com.yellowsquared.nameAnalytics"
+                                        target="_blank" rel="noopener noreferrer"
+                                        class="hover:opacity-80 transition-opacity">
+                                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                                            alt="Get it on Google Play" style="height: 70px;">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeli -->
+                <div class="group relative">
+                    <div
+                        class="bg-gradient-to-br from-blue-950/20 to-teal-950/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-700/30 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-900/20 h-full relative overflow-hidden">
+                        <!-- Free Badge -->
+                        <div class="absolute top-4 left-4 z-20">
+                            <span class="inline-block bg-gold-500/80 backdrop-blur-sm text-gray-900 px-2 py-1 rounded text-xs font-medium uppercase tracking-wide">Free</span>
+                        </div>
+                        <!-- Wellness Pattern -->
+                        <div class="absolute top-4 right-4 text-blue-400/20 text-4xl transform rotate-45">✨</div>
+                        <div class="text-center relative z-10 flex flex-col h-full">
+                            <div class="rounded-xl p-6 mb-6">
+                                <div
+                                    class="w-28 h-28 rounded-2xl mx-auto flex items-center justify-center shadow-lg shadow-blue-500/20 overflow-hidden border-2 border-blue-400/30">
+                                    <img src="https://play-lh.googleusercontent.com/gjBGyB46Yyih5lDbEVHzKJ01YUsXu8fsnhGsRPRoo0EqWByuL93XQ1_NjZvJoQ-WLxEH=w480-h960"
+                                        alt="Timeli" class="w-full h-full object-cover rounded-xl">
+                                </div>
+                            </div>
+                            <h3 class="text-2xl font-medium text-cream-50 mb-2 tracking-wide">Timeli</h3>
+                            <div class="text-xs text-blue-300 mb-4 font-medium uppercase tracking-widest">Life Tracking</div>
+                            <p class="text-sm text-cream-200 leading-relaxed mb-4 font-light flex-grow">
+                                Easily log moments with <span class="text-blue-300 font-medium">quick tracking</span> and data export. 
+                                Analyze and discover patterns on your own time. Perfect for monitoring conditions, 
+                                <strong class="text-cream-100">habits, and more</strong> over time.
+                            </p>
+                            <div class="space-y-3">
+                                <div class="flex flex-row gap-2 justify-center items-center">
+                                    <a href="https://apps.apple.com/us/app/timeli-logs/id6746956173" target="_blank"
+                                        rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
+                                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1559347200"
+                                            alt="Download on the App Store" style="height: 48px;">
+                                    </a>
+                                    <a href="https://play.google.com/store/apps/details?id=com.yellowsquared.timeli"
+                                        target="_blank" rel="noopener noreferrer"
+                                        class="hover:opacity-80 transition-opacity">
+                                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                                            alt="Get it on Google Play" style="height: 70px;">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
-    <footer class="bg-gray-900 border-t border-gray-800 mt-auto">
-        <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-center space-x-8">
-                <a href="mailto:hi@yellowsquared.us" class="text-gray-300 hover:text-white">
-                    hi@yellowsquared.us
-                </a>
-                <a href="/privacy_policy" class="text-gray-300 hover:text-white">
-                    Privacy Policy
-                </a>
-            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gold-900/30 bg-gray-950/90 backdrop-blur-sm">
+        <div class="text-center space-y-4 max-w-6xl mx-auto py-16 px-6">
+                <div class="flex justify-center space-x-8">
+                    <a href="mailto:hi@yellowsquared.us"
+                        class="text-cream-400 hover:text-gold-400 transition-colors font-light tracking-wide">
+                        hi@yellowsquared.us
+                    </a>
+                    <a href="privacy_policy.html"
+                        class="text-cream-400 hover:text-gold-400 transition-colors font-light tracking-wide">
+                        Privacy Policy
+                    </a>
+                </div>
+
+                <p class="text-cream-500 text-sm font-light tracking-widest">
+                    © 2025 Yellowsquared
+                </p>
         </div>
     </footer>
-    <script src="/js/components.js"></script>
-    <script type="module">
-        import {showContent} from '/js/utils.js';
-    </script>
 </body>
 
 </html>
