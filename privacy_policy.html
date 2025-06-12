@@ -1,39 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="dark h-full">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Yellowsquared</title>
+    <!-- Shared Head Content -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
+    <script src="/js/tailwind-config.js"></script>
 </head>
 
-<body class="bg-gray-950 text-gray-100">
-    <!-- Navigation -->
+<body class="bg-gray-950 text-gray-100 flex flex-col min-h-screen">
     <nav class="fixed top-0 w-full bg-gray-900/90 backdrop-blur-md z-50 border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
-                <a href="index.html" class="flex-shrink-0 flex items-center">
+                <a href="/" class="flex-shrink-0 flex items-center">
                     <img class="h-8 w-auto" src="logo.svg" alt="Yellowsquared">
-                    <span class="ml-2 text-xl font-bold text-white">Yellow<span
-                            class="text-yellow-500">squared</span></span>
+                    <span class="ml-2 text-xl font-bold text-white">
+                        Yellow<span class="text-yellow-500">squared</span>
+                    </span>
                 </a>
                 <div class="flex items-center space-x-4">
-                    <a href="index.html#gallery" class="text-gray-300 hover:text-white">Gallery</a>
-                    <a href="privacy_policy.html" class="text-gray-300 hover:text-white">Privacy</a>
                     <a href="mailto:hi@yellowsquared.us"
                         class="bg-yellow-500 text-black px-4 py-2 rounded-lg hover:bg-yellow-400 transition-colors font-medium">
                         Contact Us
@@ -42,144 +30,157 @@
             </div>
         </div>
     </nav>
-    <!-- Privacy Policy Content -->
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
-        <h1 class="text-4xl font-bold text-white mb-8">Privacy Policy</h1>
-        <p class="text-gray-300 mb-6">Last updated: December 17, 2024</p>
+    <main class="flex-grow">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
+            <h1 class="text-4xl font-bold text-white mb-8">Privacy Policy</h1>
+            <p class="text-gray-300 mb-6">Last updated: December 17, 2024</p>
 
-        <!-- Introduction -->
-        <section class="mb-12">
-            <p class="text-gray-300">
-                This privacy policy applies to the Instapad app (hereby referred to as "Application") for mobile devices
-                that was created by Yellowsquared, LLC (hereby referred to as "Service Provider") as an Ad Supported
-                service. This service is intended for use "AS IS".
-            </p>
-        </section>
+            <section class="mb-12">
+                <p class="text-gray-300">
+                    This privacy policy applies to the following apps: Instapad, Name Analytics (hereby referred to as "Application") for mobile
+                    devices
+                    that was created by Yellowsquared, LLC (hereby referred to as "Service Provider") as an Ad Supported
+                    service. This service is intended for use "AS IS".
+                </p>
+            </section>
 
-        <!-- Information Collection and Use -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">Information Collection and Use</h2>
-            <p class="text-gray-300 mb-4">
-                The Application collects information when you download and use it. This information may include:
-            </p>
-            <ul class="list-disc pl-6 text-gray-300 mb-4">
-                <li>Your device's Internet Protocol address (e.g. IP address)</li>
-                <li>The pages of the Application that you visit, the time and date of your visit, the time spent on
-                    those pages</li>
-                <li>The time spent on the Application</li>
-                <li>The operating system you use on your mobile device</li>
-            </ul>
-            <p class="text-gray-300 mb-4">The Application does not gather precise information about the location of your
-                mobile device.</p>
-            <p class="text-gray-300">
-                The Service Provider may use the information you provided to contact you from time to time to provide
-                you with important information, required notices, and marketing promotions.
-            </p>
-        </section>
+            <!-- Information Collection and Use -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-semibold text-white mb-4">Information Collection and Use</h2>
+                <p class="text-gray-300 mb-4">
+                    The Application collects information when you download and use it. This information may include:
+                </p>
+                <ul class="list-disc pl-6 text-gray-300 mb-4">
+                    <li>Your device's Internet Protocol address (e.g. IP address)</li>
+                    <li>The pages of the Application that you visit, the time and date of your visit, the time spent on
+                        those pages</li>
+                    <li>The time spent on the Application</li>
+                    <li>The operating system you use on your mobile device</li>
+                </ul>
+                <p class="text-gray-300 mb-4">The Application does not gather precise information about the location of
+                    your
+                    mobile device.</p>
+                <p class="text-gray-300">
+                    The Service Provider may use the information you provided to contact you from time to time to
+                    provide
+                    you with important information, required notices, and marketing promotions.
+                </p>
+            </section>
 
-        <!-- Third Party Access -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">Third Party Access</h2>
-            <p class="text-gray-300 mb-4">
-                Only aggregated, anonymized data is periodically transmitted to external services to aid the Service
-                Provider in improving the Application and their service. The Service Provider may share your information
-                with third parties in the ways described in this privacy statement.
-            </p>
-            <p class="text-gray-300 mb-4">Below are the links to the Privacy Policy of the third-party service providers
-                used by the Application:</p>
-            <ul class="list-disc pl-6 text-gray-300 mb-4">
-                <li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer"
-                        class="text-yellow-500 hover:text-yellow-400">Google Play Services</a></li>
-                <li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank"
-                        rel="noopener noreferrer" class="text-yellow-500 hover:text-yellow-400">AdMob</a></li>
-            </ul>
-        </section>
+            <!-- Third Party Access -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-semibold text-white mb-4">Third Party Access</h2>
+                <p class="text-gray-300 mb-4">
+                    Only aggregated, anonymized data is periodically transmitted to external services to aid the Service
+                    Provider in improving the Application and their service. The Service Provider may share your
+                    information
+                    with third parties in the ways described in this privacy statement.
+                </p>
+                <p class="text-gray-300 mb-4">Below are the links to the Privacy Policy of the third-party service
+                    providers
+                    used by the Application:</p>
+                <ul class="list-disc pl-6 text-gray-300 mb-4">
+                    <li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer"
+                            class="text-yellow-500 hover:text-yellow-400">Google Play Services</a></li>
+                    <li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank"
+                            rel="noopener noreferrer" class="text-yellow-500 hover:text-yellow-400">AdMob</a></li>
+                </ul>
+            </section>
 
-        <!-- Opt-Out Rights -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">Opt-Out Rights</h2>
-            <p class="text-gray-300">
-                You can stop all collection of information by the Application easily by uninstalling it. You may use the
-                standard uninstall processes as may be available as part of your mobile device or via the mobile
-                application marketplace or network.
-            </p>
-        </section>
+            <!-- Opt-Out Rights -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-semibold text-white mb-4">Opt-Out Rights</h2>
+                <p class="text-gray-300">
+                    You can stop all collection of information by the Application easily by uninstalling it. You may use
+                    the
+                    standard uninstall processes as may be available as part of your mobile device or via the mobile
+                    application marketplace or network.
+                </p>
+            </section>
 
-        <!-- Data Retention Policy -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">Data Retention Policy</h2>
-            <p class="text-gray-300 mb-4">
-                The Service Provider will retain User Provided data for as long as you use the Application and for a
-                reasonable time thereafter. If you'd like them to delete User Provided Data that you have provided via
-                the Application, please contact them at <a href="mailto:hi@yellowsquared.us"
-                    class="text-yellow-500 hover:text-yellow-400">hi@yellowsquared.us</a>, and they will respond in a
-                reasonable time.
-            </p>
-        </section>
+            <!-- Data Retention Policy -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-semibold text-white mb-4">Data Retention Policy</h2>
+                <p class="text-gray-300 mb-4">
+                    The Service Provider will retain User Provided data for as long as you use the Application and for a
+                    reasonable time thereafter. If you'd like them to delete User Provided Data that you have provided
+                    via
+                    the Application, please contact them at <a href="mailto:hi@yellowsquared.us"
+                        class="text-yellow-500 hover:text-yellow-400">hi@yellowsquared.us</a>, and they will respond in
+                    a
+                    reasonable time.
+                </p>
+            </section>
 
-        <!-- Children -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">Children</h2>
-            <p class="text-gray-300 mb-4">
-                The Service Provider does not knowingly collect data from children under the age of 13. If aware of such
-                data collection, they will take action to delete it immediately. Parents or guardians can contact <a
-                    href="mailto:hi@yellowsquared.us"
-                    class="text-yellow-500 hover:text-yellow-400">hi@yellowsquared.us</a>.
-            </p>
-        </section>
+            <!-- Children -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-semibold text-white mb-4">Children</h2>
+                <p class="text-gray-300 mb-4">
+                    The Service Provider does not knowingly collect data from children under the age of 13. If aware of
+                    such
+                    data collection, they will take action to delete it immediately. Parents or guardians can contact <a
+                        href="mailto:hi@yellowsquared.us"
+                        class="text-yellow-500 hover:text-yellow-400">hi@yellowsquared.us</a>.
+                </p>
+            </section>
 
-        <!-- Security -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">Security</h2>
-            <p class="text-gray-300">
-                The Service Provider provides physical, electronic, and procedural safeguards to protect the information
-                they process and maintain.
-            </p>
-        </section>
+            <!-- Security -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-semibold text-white mb-4">Security</h2>
+                <p class="text-gray-300">
+                    The Service Provider provides physical, electronic, and procedural safeguards to protect the
+                    information
+                    they process and maintain.
+                </p>
+            </section>
 
-        <!-- Changes -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">Changes</h2>
-            <p class="text-gray-300">
-                This Privacy Policy may be updated from time to time. Continued use after updates constitutes approval
-                of changes. This privacy policy is effective as of December 17, 2024.
-            </p>
-        </section>
+            <!-- Changes -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-semibold text-white mb-4">Changes</h2>
+                <p class="text-gray-300">
+                    This Privacy Policy may be updated from time to time. Continued use after updates constitutes
+                    approval
+                    of changes. This privacy policy is effective as of December 17, 2024.
+                </p>
+            </section>
 
-        <!-- Your Consent -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">Your Consent</h2>
-            <p class="text-gray-300">
-                By using the Application, you consent to the processing of your information as outlined in this Privacy
-                Policy.
-            </p>
-        </section>
+            <!-- Your Consent -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-semibold text-white mb-4">Your Consent</h2>
+                <p class="text-gray-300">
+                    By using the Application, you consent to the processing of your information as outlined in this
+                    Privacy
+                    Policy.
+                </p>
+            </section>
 
-        <!-- Contact Us -->
-        <section>
-            <h2 class="text-2xl font-semibold text-white mb-4">Contact Us</h2>
-            <p class="text-gray-300">
-                For any questions regarding this Privacy Policy, please contact us via email at <a
-                    href="mailto:hi@yellowsquared.us"
-                    class="text-yellow-500 hover:text-yellow-400">hi@yellowsquared.us</a>.
-            </p>
-        </section>
-    </div>
-
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <!-- Contact Us -->
+            <section>
+                <h2 class="text-2xl font-semibold text-white mb-4">Contact Us</h2>
+                <p class="text-gray-300">
+                    For any questions regarding this Privacy Policy, please contact us via email at <a
+                        href="mailto:hi@yellowsquared.us"
+                        class="text-yellow-500 hover:text-yellow-400">hi@yellowsquared.us</a>.
+                </p>
+            </section>
+        </div>
+    </main>
+    <footer class="bg-gray-900 border-t border-gray-800 mt-auto">
+        <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
             <div class="flex justify-center space-x-8">
                 <a href="mailto:hi@yellowsquared.us" class="text-gray-300 hover:text-white">
                     hi@yellowsquared.us
                 </a>
-                <a href="privacy_policy.html" class="text-gray-300 hover:text-white">
+                <a href="/privacy" class="text-gray-300 hover:text-white">
                     Privacy Policy
                 </a>
             </div>
         </div>
     </footer>
+    <script src="/js/components.js"></script>
+    <script type="module">
+         import { showContent } from '/js/utils.js';
+    </script>
 </body>
 
 </html>

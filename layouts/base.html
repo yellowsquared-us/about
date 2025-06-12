@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" class="dark h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}YellowSquared{% endblock %}</title>
+    <!-- Shared Head Content -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="/js/tailwind-config.js"></script>
+</head>
+<body class="bg-gray-950 text-gray-100 flex flex-col min-h-screen">
+    {% include "components/nav.html" %}
+    <main class="flex-grow">
+        {% block content %}{% endblock %}
+    </main>
+    {% include "components/footer.html" %}
+</body>
+</html>
