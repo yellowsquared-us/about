@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yellowsquared.us/sitemap.xml
+
+# Allow crawling of important files for LLMs and AI agents
+Allow: /llms.txt
+Allow: /agents.txt
+
+# Disallow sensitive files
+Disallow: /reset_password.html
+Disallow: /email_verified.html
