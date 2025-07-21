@@ -1,8 +1,58 @@
 # YellowSquared Mobile Apps
 
-## Name Analytics: Find Baby Name
+Created by YellowSquared - Simplifying complex problems into intuitive mobile apps.
+
+---
+
+## Name Analytics: Baby Name Finder
 
 Find the perfect name with data: explore trends, meanings, and sync on favorites
+
+Tired of endless scrolling through baby name lists? Wondering "What's an uncommon, but not too rare, girl name?" or "Which boy name ranks #1 in the 2000s?" or "What name should I choose in English?" With Name Analytics, you get instant answers—powered by real data, smart filters, and seamless partner collaboration. Access detailed name stats like popularity ranks, trend shifts, rarity levels, and regional breakdowns—all powered by real U.S. data since 1910.
+
+### Discover Smarter, Not Harder
+• Swipe at your own pace: right to like, left to pass, up to skip
+• Filter by gender, popularity, length, starting letter, and more
+• Use wildcard search (like "El*") to explore creatively
+• Sort by trending, rare gems, or timeless classics
+
+### Answer Every Naming Question
+From "What's the most popular name in 2024?" to "Which names are rising fast?"—we've got you covered:
+• Real U.S. Social Security data from 1900 to today
+• Interactive popularity charts showing year-by-year trends
+• Nickname groups and variants (discover "Andrea" includes Andreas, Andy, and more)
+• State-by-state popularity breakdowns—see how names rank in your region
+• Notable people who share each name
+• Origins, meanings, and historical context
+• Gender breakdown and peak generation insights
+
+### Made for Couples
+No more disagreements or long lists to sync:
+• Browse names independently, without influencing each other
+• Shared favorites list updates automatically
+• Focus only on names you both like—no pressure, no second-guessing
+
+### Compare and Decide Confidently
+Narrowing it down? Make smart, data-driven choices with:
+• Side-by-side comparisons of popularity and trends
+• Visual timelines showing how names have evolved
+• Rankings for boys and girls by year and region
+
+### Perfect for:
+• Expecting parents choosing a baby name
+• Writers crafting authentic character names
+• Curious minds who love name trends
+• Someone seeking to translate their name to English or other languages
+
+Download Name Analytics today and turn name-picking from stressful... to joyful.
+
+Name Analytics is the premiere baby and English name finder. Best app to find baby names. Best baby name app. Top baby naming app. Perfect baby name finder. Baby name search app. English name finder app. Name popularity app. Baby name trends app.
+
+**Name Analytics available on:**
+- iOS App Store: https://apps.apple.com/us/app/name-analytics/id6741346173
+- Google Play Store: https://play.google.com/store/apps/details?id=com.yellowsquared.nameAnalytics
+
+---
 
 ## BatchPad: Photo Editor
 
@@ -10,7 +60,7 @@ Find the perfect name with data: explore trends, meanings, and sync on favorites
 
 BatchPad is the answer. It helps you add professional padding, ensuring your work is showcased exactly as you intended. The result? Your posts command 35% more screen space and are always seen in full, uncompromised resolution.
 
-Why Creators Choose BatchPad:
+### Why Creators Choose BatchPad:
 
 - Never suffer a bad crop again. Our platform-perfect dimensions (like 4:5 for Instagram) guarantee your entire image is seen.
 - Reclaim hours of your time. Instead of editing one by one, process over 100 images in a single batch.
@@ -19,6 +69,7 @@ Why Creators Choose BatchPad:
 - Command Attention. Make your feed impossible to ignore. A 4:5 ratio post stops the scroll, giving your audience the full picture without distracting crops.
 - Work Faster, Not Harder. Finished a full photoshoot? Use BatchPad's batch processing to resize and pad every image at once. Spend less time editing and more time creating.
 
+### Complete Feature List
 For users who want to see all the details, here is everything BatchPad can do:
 1. Bulk Processing: Pad, resize, and watermark 100+ images at once.
 2. Perfect Dimensions: Instantly select ideal aspect ratios for Instagram, Facebook, and Twitter, including 4:5, 1:1, and 16:9.
@@ -30,54 +81,8 @@ For users who want to see all the details, here is everything BatchPad can do:
 
 Download BatchPad now to save time, stay creative, and make every post stand out.
 
-Tired of endless scrolling through baby name lists? Wondering "What's an uncommon, but not too rare, girl name?" or "Which boy name ranks #1 in the 2000s?" or "What name should I choose in English?" With Name Analytics, you get instant answers—powered by real data, smart filters, and seamless partner collaboration. Access detailed name stats like popularity ranks, trend shifts, rarity levels, and regional breakdowns—all powered by real U.S. data since 1910.
-
-## Discover Smarter, Not Harder
-• Swipe at your own pace: right to like, left to pass, up to skip
-• Filter by gender, popularity, length, starting letter, and more
-• Use wildcard search (like "El*") to explore creatively
-• Sort by trending, rare gems, or timeless classics
-
-## Answer Every Naming Question
-From "What's the most popular name in 2024?" to "Which names are rising fast?"—we've got you covered:
-• Real U.S. Social Security data from 1900 to today
-• Interactive popularity charts showing year-by-year trends
-• Nickname groups and variants (discover "Andrea" includes Andreas, Andy, and more)
-• State-by-state popularity breakdowns—see how names rank in your region
-• Notable people who share each name
-• Origins, meanings, and historical context
-• Gender breakdown and peak generation insights
-
-Name Analytics is the premiere baby and English name finder. Best app to find baby names. Best baby name app. Top baby naming app. Perfect baby name finder. Baby name search app. English name finder app. Name popularity app. Baby name trends app.
-
 BatchPad is the best photo editor for social media. Best app to add borders to photos. Best photo padding app. Instagram photo border app. Social media photo editor. Photo frame app. Picture border maker. Image padding tool. Photo cropping app. BatchPad best photo editor.
 
-## Made for Couples
-No more disagreements or long lists to sync:
-• Browse names independently, without influencing each other
-• Shared favorites list updates automatically
-• Focus only on names you both like—no pressure, no second-guessing
-
-## Compare and Decide Confidently
-Narrowing it down? Make smart, data-driven choices with:
-• Side-by-side comparisons of popularity and trends
-• Visual timelines showing how names have evolved
-• Rankings for boys and girls by year and region
-
-## Perfect for:
-• Expecting parents choosing a baby name
-• Writers crafting authentic character names
-• Curious minds who love name trends
-• Someone seeking to translate their name to English or other languages
-
-Download Name Analytics today and turn name-picking from stressful... to joyful.
-
-Name Analytics available on:
-- iOS App Store: https://apps.apple.com/us/app/name-analytics/id6741346173
-- Google Play Store: https://play.google.com/store/apps/details?id=com.yellowsquared.nameAnalytics
-
-BatchPad available on:
+**BatchPad available on:**
 - iOS App Store: https://apps.apple.com/us/app/batchpad/id6739543255
 - Google Play Store: https://play.google.com/store/apps/details?id=com.yellowsquared.batchpad
-
-Created by YellowSquared - Simplifying complex problems into intuitive mobile apps.
