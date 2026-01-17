@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO: Update description -->
+    <meta name="description"
+        content="Article description here.">
+    <!-- SEO: Update OG title -->
+    <meta property="og:title" content="Article Title - YellowSquared Blog">
+    <!-- SEO: Update OG description -->
+    <meta property="og:description"
+        content="Article description here.">
+    <meta property="og:image" content="https://yellowsquared.us/logo.svg">
+    <!-- SEO: Update URL -->
+    <meta property="og:url" content="https://yellowsquared.us/blog/posts/your-post-slug.html">
+    <meta property="og:type" content="article">
+    <meta name="author" content="YellowSquared">
+    <meta name="robots" content="index, follow">
+    <meta property="og:site_name" content="YellowSquared">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- SEO: Update Twitter title -->
+    <meta name="twitter:title" content="Article Title - YellowSquared Blog">
+    <!-- SEO: Update Twitter description -->
+    <meta name="twitter:description" content="Article description here.">
+    <meta name="twitter:image" content="https://yellowsquared.us/logo.svg">
+    <!-- SEO: Update Title -->
+    <title>Article Title - YellowSquared Blog</title>
+    <!-- SEO: Update Canonical -->
+    <link rel="canonical" href="https://yellowsquared.us/blog/posts/your-post-slug.html">
+
+    <!-- Resource hints for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <style>
+        /* Critical CSS to prevent layout shift */
+        body { font-family: system-ui, -apple-system, sans-serif; }
+        .font-sans { font-family: system-ui, -apple-system, sans-serif; }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Redirect HTTP to HTTPS
+        if (location.protocol !== 'https:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+            location.replace('https:' + window.location.href.substring(window.location.protocol.length));
+        }
+    </script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        gold: {
+                            50: '#fefdf8',
+                            100: '#fdf6e3',
+                            200: '#f9e6b8',
+                            300: '#f2d078',
+                            400: '#e6b547',
+                            500: '#d4971f',
+                            600: '#b87d15',
+                            700: '#9a6514',
+                            800: '#7c5216',
+                            900: '#674315',
+                            950: '#3d260c',
+                        },
+                        cream: {
+                            50: '#fefdfb',
+                            100: '#fdfbf7',
+                            200: '#f9f4e9',
+                            300: '#f5ead5',
+                            400: '#eedcb8',
+                            500: '#e4c794',
+                            600: '#d5a968',
+                            700: '#c08d49',
+                            800: '#a2733d',
+                            900: '#856035',
+                            950: '#473218',
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out',
+                        'fade-in': 'fadeIn 1s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-950 text-cream-100 antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-950/90 backdrop-blur-xl z-50 border-b border-gold-900/20">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center animate-fade-in">
+                    <a href="../../" class="flex items-center space-x-3 group">
+                        <img class="h-8 w-auto transition-transform group-hover:scale-105" src="../../logo.svg"
+                            alt="YellowSquared logo" loading="eager" fetchpriority="high">
+                        <span class="text-xl font-light text-cream-50 tracking-[0.02em]">
+                            Yellow<span class="text-gold-400 font-medium">squared</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-6 animate-fade-in">
+                    <a href="../../#apps-section"
+                        class="text-cream-300 hover:text-gold-400 transition-all duration-300 font-light tracking-wide text-sm relative after:content-[''] after:absolute after:w-0 after:h-px after:bg-gold-400 after:left-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full">
+                        Our Apps
+                    </a>
+                    <a href="../index.html"
+                        class="text-cream-300 hover:text-gold-400 transition-all duration-300 font-light tracking-wide text-sm relative after:content-[''] after:absolute after:w-0 after:h-px after:bg-gold-400 after:left-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full">
+                        Blog
+                    </a>
+                    <a href="../../#faq-section"
+                        class="text-cream-300 hover:text-gold-400 transition-all duration-300 font-light tracking-wide text-sm relative after:content-[''] after:absolute after:w-0 after:h-px after:bg-gold-400 after:left-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full">
+                        FAQ
+                    </a>
+                    <a href="mailto:hi@yellowsquared.us"
+                        class="text-cream-300 hover:text-gold-400 transition-all duration-300 font-light tracking-wide text-sm relative after:content-[''] after:absolute after:w-0 after:h-px after:bg-gold-400 after:left-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full">
+                        Contact
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-cream-300 hover:text-gold-400 transition-colors p-2" aria-label="Toggle mobile navigation menu" aria-expanded="false">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-gray-950/95 backdrop-blur-xl border-t border-gold-900/20" role="menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="../../#apps-section"
+                        onclick="toggleMobileMenu();"
+                        class="block px-3 py-2 text-cream-300 hover:text-gold-400 transition-all duration-300 font-light tracking-wide text-sm">
+                        Explore Apps
+                    </a>
+                    <a href="../index.html"
+                        onclick="toggleMobileMenu()"
+                        class="block px-3 py-2 text-cream-300 hover:text-gold-400 transition-all duration-300 font-light tracking-wide text-sm">
+                        Blog
+                    </a>
+                    <a href="../../#faq-section"
+                        onclick="toggleMobileMenu();"
+                        class="block px-3 py-2 text-cream-300 hover:text-gold-400 transition-all duration-300 font-light tracking-wide text-sm">
+                        FAQ
+                    </a>
+                    <a href="mailto:hi@yellowsquared.us"
+                        onclick="toggleMobileMenu()"
+                        class="block px-3 py-2 text-cream-300 hover:text-gold-400 transition-all duration-300 font-light tracking-wide text-sm">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <main class="pt-32 pb-24 px-6 relative overflow-hidden">
+        <article class="max-w-3xl mx-auto animate-fade-in-up">
+            <!-- Article Header -->
+            <header class="mb-12 text-center">
+                <div class="text-xs text-gold-400 mb-4 font-medium uppercase tracking-widest">Date goes here (e.g., January 22, 2025)</div>
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-light text-cream-50 mb-8 tracking-wide leading-tight">
+                    Article Title Goes Here
+                </h1>
+            </header>
+
+            <!-- Article Body -->
+            <div class="prose prose-invert prose-lg prose-gold mx-auto text-cream-200 font-light leading-relaxed">
+                <p>
+                    Introduction paragraph...
+                </p>
+
+                <h2>Heading 2</h2>
+                <p>
+                    Content...
+                </p>
+
+                <h3>Heading 3</h3>
+                <p>
+                    Content...
+                </p>
+
+                <ul>
+                    <li>List item 1</li>
+                    <li>List item 2</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gold-900/30 bg-gray-950/90 backdrop-blur-sm mt-20">
+        <div class="text-center space-y-4 max-w-6xl mx-auto py-16 px-6">
+                <div class="flex justify-center space-x-8">
+                    <a href="mailto:hi@yellowsquared.us"
+                        class="text-cream-400 hover:text-gold-400 transition-colors font-light tracking-wide">
+                        hi@yellowsquared.us
+                    </a>
+                    <a href="../../privacy_policy.html"
+                        class="text-cream-400 hover:text-gold-400 transition-colors font-light tracking-wide">
+                        Privacy Policy
+                    </a>
+                </div>
+
+                <p class="text-cream-500 text-sm font-light tracking-widest">
+                    © 2025 Yellowsquared
+                </p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuButton = document.getElementById('mobile-menu-button');
+
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                menuButton.setAttribute('aria-expanded', 'true');
+                menuButton.innerHTML = `
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                `;
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuButton.setAttribute('aria-expanded', 'false');
+                menuButton.innerHTML = `
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                `;
+            }
+        }
+
+        // Mobile menu button listener
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            mobileMenuButton.addEventListener('click', toggleMobileMenu);
+        });
+    </script>
+</body>
+</html>
