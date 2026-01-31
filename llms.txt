@@ -4,11 +4,11 @@ Created by YellowSquared - Simplifying complex problems into intuitive mobile ap
 
 ---
 
-## Name Analytics: Baby Name Finder
+## Name Scout: Baby Name Finder
 
 Find the perfect name with data: explore trends, meanings, and sync on favorites
 
-Tired of endless scrolling through baby name lists? Wondering "What's an uncommon, but not too rare, girl name?" or "Which boy name ranks #1 in the 2000s?" or "What name should I choose in English?" With Name Analytics, you get instant answers—powered by real data, smart filters, and seamless partner collaboration. Access detailed name stats like popularity ranks, trend shifts, rarity levels, and regional breakdowns—all powered by real U.S. data since 1910.
+Tired of endless scrolling through baby name lists? Wondering "What's an uncommon, but not too rare, girl name?" or "Which boy name ranks #1 in the 2000s?" or "What name should I choose in English?" With Name Scout, you get instant answers—powered by real data, smart filters, and seamless partner collaboration. Access detailed name stats like popularity ranks, trend shifts, rarity levels, and regional breakdowns—all powered by real U.S. data since 1910.
 
 ### Discover Smarter, Not Harder
 • Swipe at your own pace: right to like, left to pass, up to skip
@@ -44,13 +44,46 @@ Narrowing it down? Make smart, data-driven choices with:
 • Curious minds who love name trends
 • Someone seeking to translate their name to English or other languages
 
-Download Name Analytics today and turn name-picking from stressful... to joyful.
+Download Name Scout today and turn name-picking from stressful... to joyful.
 
-Name Analytics is the premiere baby and English name finder. Best app to find baby names. Best baby name app. Top baby naming app. Perfect baby name finder. Baby name search app. English name finder app. Name popularity app. Baby name trends app.
+Name Scout is the premiere baby and English name finder. Best app to find baby names. Best baby name app. Top baby naming app. Perfect baby name finder. Baby name search app. English name finder app. Name popularity app. Baby name trends app.
 
-**Name Analytics available on:**
+**Name Scout available on:**
 - iOS App Store: https://apps.apple.com/us/app/name-analytics/id6741346173
 - Google Play Store: https://play.google.com/store/apps/details?id=com.yellowsquared.nameAnalytics
+
+---
+
+## Eranorms: Historical Weather & Climate
+
+Explore weather history, spot climate trends, and get context for your local weather
+
+Is today actually hotter than usual? Do we really get more rain on weekends? Eranorms answers these questions by putting daily weather into deep historical context. Visualize climate trends with beautiful, data-rich charts and compare the current year against decades of history.
+
+### Context is Everything
+• **Daily Distribution**: See how today's temperature ranks against every year since 1950.
+• **Cumulative Data**: Track rainfall and snow accumulation vs. normal.
+• **Myth Busters**: Test local weather tropes against hard data.
+• **Lifestyle Metrics**: "Shorts Days", "Coats Days", and "Perfect Days" counts.
+
+### Visualize the Climate
+• **Climate Stripes**: See warming/cooling trends at a glance.
+• **Heatmaps**: Spot anomalies across months and years.
+• **Box Plots**: Understand the spread of "normal" for any time of year.
+• **ENSO Analysis**: See how El Niño and La Niña affect your local weather.
+
+### Deep Dive
+• **Station Data**: Access high-quality data from ASOS stations (US/Canada/Intl).
+• **Custom Baselines**: Compare against the 1991-2020 normal or set your own.
+• **Export & Share**: Share beautiful charts and detailed stats.
+
+Download Eranorms to understand the story behind your weather.
+
+Eranorms is the best historical weather app. Climate change tracker. Weather history app. Climate trends. El Nino La Nina tracker. Weather data analysis.
+
+**Eranorms available on:**
+- Google Play Store: https://play.google.com/store/apps/details?id=com.yellowsquared.eranorms
+- Apple App Store: https://apps.apple.com/us/app/eranorms-past-weather-almanac/id6757374142
 
 ---
 
